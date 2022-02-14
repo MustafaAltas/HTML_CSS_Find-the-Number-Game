@@ -5,6 +5,7 @@ let ilk_değer = document.getElementById("ilk_değer");
 let son_değer = document.getElementById("son_değer");
 let mesaj = document.getElementById("mesaj");
 let resim = document.getElementById("resim");
+let reset = document.getElementById("input_reset");
 
 const sayıTahmin = Math.floor(Math.random() * 100) + 1;
 
@@ -39,3 +40,10 @@ check.addEventListener("click", (event) => {
   }
   event.preventDefault();
 });
+
+
+reset.addEventListener("click",(event) => {
+
+    //window.location.reload(false)  sayfanın yenilenmesini sağlar.
+    window.location.reload(false)
+})

@@ -44,6 +44,19 @@ body {
     border: none;
 }
 
+.input_reset {
+    width: 4rem;
+    background-color: #0004ff;
+    font-size: 15px;
+    font-weight: 900;
+    border: none;
+    color: white;
+}
+.input_reset:hover {
+    background-color: #7072df;
+    border: 1px inset grey;
+}
+
 .input_submit:hover {
     border: 1px inset grey;
     background-color:#f19595; ;
