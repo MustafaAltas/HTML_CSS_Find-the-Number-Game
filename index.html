@@ -16,7 +16,8 @@
   </head>
   <body>
     <section class="container">
-      <h1 id="başlık">Guess the number(1-100)</h1>
+      <h1 id="başlık">Guess the number(<span id="ilk_değer">1</span>-<span id="son_değer">100</span>)</h1>
+      <div id="mesaj"></div>
       <div class="girdi">
         <input type="number" name="input_numara" id="input_numara" />
         <button class="input_submit" id="input_submit">CHECK</button>
@@ -25,11 +26,14 @@
         src="./img/favpng_homer-simpson-bart-simpson-drawing-pub-quiz-thought.png"
         alt="düşünen adam"
         width="300rem"
+        id="resim"
       />
       <div class="content1">Write the number</div>
       <div class="content2">
-        Number Of Attemps: <span class="kalan_hak" id="kalan_hak">3</span>
+        Number Of Attemps: <span class="kalan_hak" id="kalan_hak">10</span>
       </div>
+      
     </section>
+    <script src="./app.js"></script>
   </body>
 </html>
