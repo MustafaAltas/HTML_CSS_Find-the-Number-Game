@@ -7,10 +7,22 @@ let mesaj = document.getElementById("mesaj");
 let resim = document.getElementById("resim");
 let reset = document.getElementById("input_reset");
 
+
+//***+++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+//***+++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+//***+++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+// sabit olarak 1-100 arası bir sayıyı tukmak için kullandım.
 const sayıTahmin = Math.floor(Math.random() * 100) + 1;
 
 
+//Check butonunun event kısmı
 check.addEventListener("click", (event) => {
+  if (inputSayı.value == "") {
+    alert("Sayı Girişi Yapmadın\n****Tekrar Başlayalım****");
+    window.location.reload(false);
+  }
+
   if (inputSayı.value < sayıTahmin) {
     kalanHak.innerHTML--;
     ilk_değer.innerHTML = inputSayı.value;
@@ -38,12 +50,15 @@ check.addEventListener("click", (event) => {
     resim.setAttribute("src", "./img/sevinç.png");
     resim.style.width = "30rem";
   }
+
+
   event.preventDefault();
 });
 
 
-reset.addEventListener("click",(event) => {
-
-    //window.location.reload(false)  sayfanın yenilenmesini sağlar.
-    window.location.reload(false)
-})
+//****+++++++++++++++++++++++++++++++++++++++++++++++++ */
+//Reset butonunun event kısmı
+reset.addEventListener("click", (event) => {
+  //window.location.reload(false)  sayfanın yenilenmesini sağlar.
+  window.location.reload(false);
+});
